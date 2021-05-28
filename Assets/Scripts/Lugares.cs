@@ -20,10 +20,10 @@ public class Lugares : MonoBehaviour
         int[] indexes = arraySelected.getArraySelected();
         
         this.lugaresSelected = new Transform[indexes.Length+1];
-        this.lugaresSelected[0] = allLugares[0].transform;
+        //this.lugaresSelected[0] = allLugares[0].transform;
         for(int i=0;i<indexes.Length;i++){
             GameObject lugarN = allLugares[indexes[i]];
-            lugaresSelected[i+1] = lugarN.transform;
+            lugaresSelected[i] = lugarN.transform;
             lugarN.SetActive(true);
         }
         this.regreso = arraySelected.regresoIsOn();
@@ -53,22 +53,25 @@ public class Lugares : MonoBehaviour
         if(regreso) {
         if (Vector2.Distance(transform.position, currentTargetPoint.position) < 0.2f)
         {
-            if(currentTargetIndex + 1 < lugaresSelected.Length){
+            if(currentTargetIndex + 1 < lugaresSelected.Length-1){
                 currentTargetIndex ++;
                 print(currentTargetIndex);
                 }
-            else{
-               currentTargetIndex = 0;
-            }
+           else{
+            transform.right = allLugares[0].transform.position - transform.position;
+            movement = ( allLugares[0].transform.position - transform.position).normalized;
+            transform.position = Vector2.MoveTowards(transform.position, allLugares[0].transform.position,speed * Time.deltaTime);
+                 }
             currentTargetPoint = lugaresSelected[currentTargetIndex];
-        }
+            }
         }
         else{
+
           if (Vector2.Distance(transform.position, currentTargetPoint.position) < 0.2f)
         {
-            if(currentTargetIndex + 1 < lugaresSelected.Length){
+            if(currentTargetIndex + 1 < lugaresSelected.Length-1){
                 currentTargetIndex ++;
-                //print(currentTargetIndex);
+                print(currentTargetIndex);
                 }
      
             currentTargetPoint = lugaresSelected[currentTargetIndex];

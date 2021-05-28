@@ -18,9 +18,10 @@ public class CheckedPlaces : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void setPlaces(int[] places,bool regreso){
+    public void setRuta(int[] places,bool regreso){
         this.chosenPlaces = places;
         this.regreso = regreso;
+        
         //printArray(this.chosenPlaces);
     }
 
