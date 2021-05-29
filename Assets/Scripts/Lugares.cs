@@ -39,6 +39,14 @@ public class Lugares : MonoBehaviour
         patrullar = avanzar();
         StartCoroutine(patrullar);
 
+        LineRenderer l = GetComponent<LineRenderer>();
+        l = GetComponent<LineRenderer>();
+        l.positionCount = lugaresSelected.Length-1;
+        for (int i = 0; i < lugaresSelected.Length-1; i++)
+        {
+             l.SetPosition(i,lugaresSelected[i].transform.position);
+        }
+
         ////////////////////////////////////
         ////////////DrawLine////////////////
         ////////////////////////////////////

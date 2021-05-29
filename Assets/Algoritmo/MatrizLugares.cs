@@ -12,7 +12,7 @@ public class MatrizLugares : MonoBehaviour
 
     void Start()
     {
-        var reader = new StreamReader(File.OpenRead(@"C:\Users\Daniel Díaz López\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\6to Semestre\Análisis y diseño de algoritmos\Proyecto_viajero_extranjero.csv"));
+       var reader = new StreamReader(File.OpenRead("Assets/Proyecto_viajero_extranjero.csv"));
         
         //Leer la primera linea, los nombres de los lugares.
         string[] line = reader.ReadLine().Split(',');
