@@ -13,3 +13,5 @@ There are four scenes in the Unity project. You should run the "Menu" scene, as 
 
 
 Note: ths only considers distance, not traffic or other important parameters for a more accurate calculation.
+
+![image](https://user-images.githubusercontent.com/78662124/160269423-babee4fa-0774-4bb0-adb1-f6a221e5fd43.png)
