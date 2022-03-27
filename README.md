@@ -1,5 +1,5 @@
 # Guadalajara_Tour_Guide_TSP
-Guadalajara Tour Guide project that calculates the shortest route to visit the chosen tourist places in GDL. Based of Travelling Salesman Problem.
+Guadalajara Tour Guide project that calculates the shortest route to visit the chosen tourist places in GDL. Based of Travelling Salesman Problem. Made in Unity.
 
 Foreign exchange students at TEC GDL want to visit different tourist spots in Guadalajara.
 It is desired to find the shortest route that visits the tourist points selected by the student
